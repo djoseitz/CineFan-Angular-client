@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myFlix-Angular-client": {
+    "CineFan-Angular-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myFlix-Angular-client",
+            "outputPath": "dist/CineFan-Angular-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myFlix-Angular-client:build"
+            "browserTarget": "CineFan-Angular-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myFlix-Angular-client:build:production"
+              "browserTarget": "CineFan-Angular-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myFlix-Angular-client:build"
+            "browserTarget": "CineFan-Angular-client:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myFlix-Angular-client:serve"
+            "devServerTarget": "CineFan-Angular-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myFlix-Angular-client:serve:production"
+              "devServerTarget": "CineFan-Angular-client:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "myFlix-Angular-client"
+  "defaultProject": "CineFan-Angular-client"
 }
