@@ -1,0 +1,16 @@
+<!-- src/app/nav-bar/nav-bar.component.html -->
+<div class="nav">
+  <div routerLink="/movies" class="nav_title">
+    <h1 class="title">CineFan</h1>
+  </div>
+
+  <div class="nav_buttons">
+    <button routerLink="/profile" class="profile">
+      Profile
+    </button>
+
+    <button class="logout" (click)="logoutUser()" routerLink="/">
+      Log Out
+    </button>
+  </div>
+</div>

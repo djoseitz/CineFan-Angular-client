@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: #f44434;
+  height: 50px;
+  width: 100vw;
+}
+
+.title {
+  margin-top: 10px;
+  // margin-left: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 2rem;
+}
+
+.title:hover,
+.nav_buttons > button:hover {
+  cursor: pointer;
+  color: #4454b4;
+}
+
+.nav_buttons {
+  margin: 2rem;
+}
+
+.nav_buttons > button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav_buttons > button:first-child {
+  margin-right: 20px;
+}
