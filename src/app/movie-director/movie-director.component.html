@@ -1,16 +1,14 @@
-<!-- src/app/movie-director/movie-director.component.html -->
-<div class="card">
-  <h1 class="director_title">
-    {{ data.Name }}
-  </h1>
-
-  <div class="details">
-    <p>
-      {{ data.Bio }}
-    </p>
-
-    <p>
-      Born: {{ data.Birth }}
-    </p>
+<!--
+  This component shows more information about the movie's director including name, bio, birth year, and death year (if applicable).
+-->
+<div class="director-dialog">
+  <div class="close-icon-container">
+    <button mat-icon-button class="close-icon" color="basic" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
+  <h1>{{data.Name}}</h1>
+  <p>{{data.Bio}}</p>
+  <p>Born: {{data.Birth}}</p>
+  <p>Died: {{data.Death}}</p>
 </div>

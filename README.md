@@ -1,6 +1,8 @@
-# CineFanAngularClient
+# FlixNETAngularClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+This is the client-side for the API I built in my [movie_api](https://github.com/jonathan-sheets/movie_api) repo. It was built using Angular and Angular Material.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4. - See it in action [HERE](https://djoseitz.github.io/CineFan-Angular-client)
 
 ## Development server
 

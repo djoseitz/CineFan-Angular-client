@@ -1,3 +1,38 @@
-.movie_title {
-  color: #4454b4;
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+h1 {
+  font-family: "Michroma", sans-serif;
+  margin-left: 25px;
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 1px;
+  color: black;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 15px red;
+}
+
+::ng-deep.mat-dialog-container {
+  background-color: #b0bec5;
+  border: 1px solid black;
+}
+
+.movie-details {
+  font-family: "Michroma", sans-serif;
+}
+
+.close-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-top: -25px;
+  margin-bottom: -20px;
+}
+
+.close-icon {
+  width: 0;
 }

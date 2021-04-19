@@ -1,12 +1,12 @@
-<!-- src/app/movie-genre/movie-genre.component.html -->
-<div class="card">
-  <h1 class="genre_title">
-    {{ data.Name }}
-  </h1>
-
-  <div class="details">
-    <p>
-      {{ data.Description }}
-    </p>
+<!--
+  This component displays information about the individual movie's genre including the name and a description.
+-->
+<div class="genre-dialog">
+  <div class="close-icon-container">
+    <button mat-icon-button class="close-icon" color="basic" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
+  <h1>{{data.name}}</h1>
+  <p>{{data.description}}</p>
 </div>

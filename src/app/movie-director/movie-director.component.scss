@@ -1,3 +1,27 @@
-.director_title {
-  color: #4454b4;
+::ng-deep.mat-dialog-container {
+  background-color: #b0bec5;
+  border: 1px solid black;
+}
+
+.director-dialog {
+  font-family: "Michroma", sans-serif;
+}
+
+h1 {
+  font-family: "Michroma", sans-serif;
+  -webkit-text-stroke: 1px black;
+  text-decoration: underline;
+}
+
+.close-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-top: -25px;
+  margin-bottom: -20px;
+}
+
+.close-icon {
+  width: 0;
 }

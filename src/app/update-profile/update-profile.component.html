@@ -1,20 +1,20 @@
 <!--
-  This component is the user registration form and is opened in a dialog box when the user clicks the "Sign Up!" button on the welcome page
+  This component allows users to edit their profile information
 -->
-<mat-card class="signup-card">
+<mat-card class="update-card">
   <div class="close-icon-container">
     <button mat-icon-button class="close-icon" color="basic" [mat-dialog-close]="true">
       <mat-icon>close</mat-icon>
     </button>
   </div>
   <mat-card-header>
-    <mat-card-title class="signup-title">Sign Up!</mat-card-title>
+    <mat-card-title class="update-title">Update Profile</mat-card-title>
   </mat-card-header>
+
   <mat-card-content>
     <form>
       <mat-form-field>
         <input
-          class="username"
           matInput
           [(ngModel)]="userData.Username"
           placeholder="Username"
@@ -27,8 +27,8 @@
         <input
           matInput
           [(ngModel)]="userData.Password"
-          type="password"
           placeholder="Password"
+          type="password"
           name="Password"
           required
         >
@@ -37,8 +37,8 @@
         <input
           matInput
           [(ngModel)]="userData.Email"
-          type="email"
           placeholder="Email"
+          type="email"
           name="Email"
           required
         >
@@ -47,21 +47,22 @@
         <input
           matInput
           [(ngModel)]="userData.Birthday"
-          type="date"
           placeholder="Birthday"
+          type="date"
           name="Birthday"
         >
       </mat-form-field>
     </form>
   </mat-card-content>
+
   <mat-card-actions>
     <button
-      class="register-button"
+      class="update-button"
       mat-raised-button
-      (click)="registerUser()"
+      (click)="editUser()"
       color="basic"
     >
-      Sign Up
+      Update
     </button>
   </mat-card-actions>
 </mat-card>

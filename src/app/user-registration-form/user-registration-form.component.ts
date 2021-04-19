@@ -1,13 +1,9 @@
-// src/app/user-registration-form/user-registration-form.component.ts
-import { Component, OnInit, Input } from '@angular/core';
-
-// closes the dialog on success
+import { Component, Input, OnInit } from '@angular/core';
+// Used this import to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
-
-// brings in the API calls created in 6.2
+// This import brings in the API calls created in fetch-api-data.service.ts
 import { UserRegistrationService } from '../fetch-api-data.service';
-
-// displays notifications back to the user
+// This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -16,36 +12,33 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./user-registration-form.component.scss']
 })
 export class UserRegistrationFormComponent implements OnInit {
-
-  @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
+  @Input() userData = { Username: '', Password: '', Email: '', Birthday: ''};
 
   constructor(
     public fetchApiData: UserRegistrationService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
-    public snackBar: MatSnackBar) { }
+    public snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
   }
 
   /**
-   * Function that sends user input to the server to create a new user
+   * This is the function responsible for sending the form inputs to the backend
    */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((response) => {
-      // logic for a successful user registration goes here (to be implemented)
-      this.dialogRef.close(); // closes the modal on success
+      // logic for a successful user registration goes here!
+      this.dialogRef.close(); // this will close the modal on success
       console.log(response);
-      this.snackBar.open('User registered succesfully', 'OK', {
-        duration: 3000,
-        verticalPosition: 'top',
+      this.snackBar.open('Account created successfully, you may now log in!', 'OK', {
+        duration: 2000
       });
     }, (response) => {
       console.log(response);
       this.snackBar.open(response, 'OK', {
-        duration: 3000,
-        verticalPosition: 'top',
+        duration: 2000
       });
     });
   }
-
 }

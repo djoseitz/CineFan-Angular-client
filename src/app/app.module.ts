@@ -24,6 +24,8 @@ import { MovieDirectorComponent } from './movie-director/movie-director.componen
 import { MovieGenreComponent } from './movie-genre/movie-genre.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { SearchPipe } from './search.pipe';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -42,7 +44,9 @@ const appRoutes: Routes = [
     MovieDirectorComponent,
     MovieGenreComponent,
     NavBarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UpdateProfileComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

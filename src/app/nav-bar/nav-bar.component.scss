@@ -1,43 +1,58 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 100;
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+#navbar {
+  position: sticky;
   top: 0;
-  background-color: #f44434;
-  height: 50px;
-  width: 100vw;
+  width: 100%;
+  z-index: 9;
 }
 
-.title {
-  margin-top: 10px;
-  // margin-left: 20px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  margin: 2rem;
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #546e7a;
+  // background-color: rgba(185, 162, 162, 0.6);
 }
 
-.title:hover,
-.nav_buttons > button:hover {
-  cursor: pointer;
-  color: #4454b4;
+.app-title {
+  font-size: 22px;
+  margin-left: 30px;
+  color: #ea0016;
+  font-weight: bold;
+  font-family: "Michroma", sans-serif;
+  -webkit-text-stroke: 1px #ea0016;
+  letter-spacing: 2px;
+  // text-decoration: underline;
 }
 
-.nav_buttons {
-  margin: 2rem;
+button {
+  font-size: 17px;
+  font-family: "Michroma", sans-serif;
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 1px;
+  color: black;
 }
 
-.nav_buttons > button {
-  color: #fff;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.3s;
+.nav-links {
+  margin-right: 35px;
 }
 
-.nav_buttons > button:first-child {
-  margin-right: 20px;
+@media only screen and (max-width: 464px) {
+  .nav-links {
+    margin-right: -5px;
+  }
+  .app-title {
+    margin-left: 0px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .nav-links {
+    margin-left: 140px;
+  }
 }

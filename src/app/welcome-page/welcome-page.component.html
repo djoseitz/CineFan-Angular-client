@@ -1,26 +1,28 @@
-<div class="main-page">
-  <h1>
-    Welcome to CineFan!
-  </h1>
-  <button
-    Mat-raised-button
-    (click)="openUserRegistrationDialog()"
-    style="margin-right: 10px;"
-    color="primary"
-  >
-    Sign Up
-  </button>
-  <button
-    mat-raised-button
-    color="primary"
-  >
-    Login
-  </button>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="openMoviesDialog()"
-  >
-    All Movies
-  </button>
-</div>
+<!--
+  This component is the welcome page that is loaded initially where users can either log in or create an account
+-->
+<body>
+  <div class="main-page">
+    <h1>
+      Welcome to <span>CineFan!</span>
+    </h1>
+    <div class="welcome-buttons">
+      <button
+        mat-raised-button
+        (click)="openUserRegistrationDialog()"
+        style="margin-right: 20px;"
+        color="basic"
+      >
+        Sign Up
+      </button>
+
+      <button
+        mat-raised-button
+        (click)="openUserLoginDialog()"
+        color="basic"
+      >
+        Login
+      </button>
+  </div>
+  </div>
+</body>

@@ -1,7 +1,7 @@
 // src/app/movie-director/movie-director.component.ts
 import { Component, Inject } from '@angular/core';
 
-// angula material
+// angular material
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -21,7 +21,11 @@ export class MovieDirectorComponent {
     public data: {
       Name: string;
       Bio: string;
-      Birth: string;
+      Birth: Date;
+      Death: Date;
     }
   ) { }
+
+  ngOnInit(): void {
+  }
 }

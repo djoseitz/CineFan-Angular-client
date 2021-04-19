@@ -1,129 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+.body {
+  background-image: linear-gradient(to bottom right, #cfd8dc, #90a4ae, #546e7a);
+}
+
+.user-profile {
+  display: flex;
+  float: right;
+  position: sticky;
+  top: 0px;
+}
+
+.profile-info {
+  background-color: rgba(55, 71, 79, 0.4);
+  box-shadow: 8px 8px 15px black;
+  font-family: "Michroma", sans-serif;
+  width: 347px;
+  margin-right: 35px;
+  margin-top: 73px;
+}
+
+.your-info {
+  margin-left: -18px;
+  -webkit-text-stroke: 1px black;
+}
+
+hr {
+  border: 1px solid black;
+  margin-bottom: 13px;
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.update-profile {
+  border: 1px solid black;
+  opacity: 0.5;
+  -webkit-text-stroke: 1px black;
+}
+
+.delete-profile {
+  border: 1px solid black;
+  opacity: 0.8;
+  -webkit-text-stroke: 0.5px white;
+}
+
+.title {
+  font-family: "Michroma", sans-serif;
+  -webkit-text-stroke: 1px black;
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 25px;
+}
+
+.favorite {
+  background-color: rgba(55, 71, 79, 0.4);
+  box-shadow: 8px 8px 15px black;
+  font-family: "Michroma", sans-serif;
+  margin: 20px;
+  width: 225px;
+}
+
+.favorite-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 img {
-  max-height: 400px;
-  border-radius: 0.5em;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 15px red;
+  width: 200px;
 }
 
-.update-container {
+.favorite-title {
+  font-family: "Michroma", sans-serif;
   text-align: center;
-  // width: 90%;
-  // margin: 75px auto 10px;
-  background-color: none;
-  // padding-top: 20px;
-  // padding-bottom: 20px;
-  // box-shadow: 0px 0px 5px #cc0000;
-  // margin-bottom: 50px;
-  margin: 5rem 2rem;
-  padding: 3em;
-}
-
-.mat-form-field {
-  margin-right: 15px;
-  margin-bottom: 20px;
-}
-
-.update-header {
-  justify-content: center;
-  color: #4454b4;
-}
-
-.update-title {
-  margin-bottom: 25px;
-  font-size: 24px;
-}
-
-.update-button-container {
-  margin-top: -20px;
-}
-
-.update-button {
-  color: white;
-  // background-color: #f44434;
-  font-size: 14px;
-  height: 25px;
-  line-height: 14px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.update-button:hover {
-  cursor: pointer;
-  background-color: #f44434;
-}
-
-.favorite-movies-heading {
-  color: #4454b4;
-  font-size: 28px;
-  text-align: center;
-}
-
-.no-favorites {
-  text-align: center;
-  font-size: 16px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  // margin-top: 75px;
-  padding: 5rem 2rem;
-}
-
-.card {
-  text-align: center;
-  margin: 10px;
-  // width: 325px;
-  // margin: 25px auto;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-}
-
-.card > mat-icon {
-  position: absolute;
-  top: 18px;
-  right: 32px;
-  color: #f44434;
-  transition: all 0.3s ease-in-out;
-}
-
-.card > mat-icon:hover {
-  cursor: pointer;
-  transform: scaleX(0.8) scaleY(0.8);
-}
-
-// .card-header {
-//   justify-content: center;
-// }
-
-.card-title {
-  font-size: 24px;
-  color: #4454b4;
-  padding: 5px;
-}
-
-// .card-image {
-//   width: 90%;
-//   margin: auto;
-//   box-shadow: 0px 0px 5px black;
-// }
-
-.buttons {
-  text-align: center;
-  margin: 1em;
-}
-
-.buttons > button {
-  color: white;
-  background-color: #4454b4;
-  font-size: 14px;
-  // margin-right: 10px;
-  // margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.buttons > button:hover {
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 1px;
   color: black;
-  background-color: #dbca74;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 
-.delete {
-  display: none;
+.remove-favorite {
+  display: flex;
+  justify-content: center;
+}
+
+.remove-button {
+  position: absolute;
+  bottom: 0;
+}
+
+button {
+  font-family: "Michroma", sans-serif;
+  font-size: 11px;
+}
+
+@media only screen and (max-width: 1022px) {
+  .user-profile {
+    display: flex;
+    float: none;
+    justify-content: center;
+    position: static;
+  }
+  .profile-info {
+    justify-self: center;
+    margin-top: 23px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .favorite-cards {
+    display: flex;
+    justify-content: center;
+  }
 }

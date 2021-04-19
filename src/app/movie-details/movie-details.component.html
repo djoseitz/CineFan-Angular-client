@@ -1,12 +1,19 @@
-<!-- src/app/movie-details/movie-details.component.html -->
-<div class="card">
-  <h1 class="movie_title">
-    {{ data.Title }}
-  </h1>
-
-  <div class="description">
-    <p>
-      {{ data.Description }}
-    </p>
+<!--
+  This component shows complete details about the individual movie including the title, poster image, description/synopsis, director, and genre.
+-->
+<div class="movie-details">
+  <div class="close-icon-container">
+    <button mat-icon-button class="close-icon" color="basic" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
+  <h1>{{data.title}}</h1>
+  <img 
+    src={{data.imagepath}} 
+    alt={{data.title}}
+    width="265px"
+  />
+  <p>{{data.description}}</p>
+  <p>Directed by: {{data.director}}</p>
+  <p>Genre: {{data.genre}}</p>
 </div>

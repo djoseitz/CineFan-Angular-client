@@ -1,5 +1,5 @@
-// src/app/nav-bar/nav-bar.component.ts
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -10,25 +10,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class NavBarComponent implements OnInit {
 
   constructor(
-    public snackbar: MatSnackBar,
+    public router: Router,
+    public snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
   }
 
   /**
-   * Function clears username and token from local storage to log out user
+   * Logs the user out, removes their data from local storage, and returns them to the welcome view/login screen
    */
   logoutUser(): void {
-    this.snackbar.open('Your are logged out.', 'OK', {
-      duration: 3000,
-      verticalPosition: 'top',
-    }),
-      this.snackbar.open('Your are logged out.', 'OK', {
-        duration: 3000,
-        verticalPosition: 'top',
-      });
     localStorage.clear();
+    this.router.navigate(['welcome']);
+    this.snackBar.open("You've been logged out", "OK", {
+      duration: 2000,
+    });
   }
-
 }

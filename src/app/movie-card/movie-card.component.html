@@ -1,47 +1,78 @@
-<!-- src/app/movie-card/movie-card.component.html -->
+<!--
+  This component is the main view after login.  It shows all movies returned by the API call.  Users can perform multiple actions on each movie card including viewing modals of individual movie details, director details, and genre details.  Users can also add individual movies to their favorites.
+-->
 <app-nav-bar></app-nav-bar>
+<div class=background>
+  
+  <div class="search-box">
+    <!-- This field is used to search all movies by title using a custom search pipe "search.pipe.ts" -->
+    <input class="search-input" type="text" placeholder="Search Movies ..." [(ngModel)]="filterTerm">
+  </div>
 
-<div class="movies">
-  <mat-card *ngFor="let movie of movies; let i = index" style="flex: 1 1 auto;">
-    <ng-container *ngIf="
-        this.favoriteMoviesIDs.includes(movie._id);
-        then favMovie;
-        else selectFav
-      "></ng-container>
-
-    <ng-template #favMovie>
-      <div class="favorite-movie">
-        <mat-icon (click)="deleteFavoriteMovie(movie._id, movie.Title)">favorite</mat-icon>
-      </div>
-    </ng-template>
-
-    <mat-card-header>
-      <mat-card-title>{{movie.Title}}</mat-card-title>
-      <!-- <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle> -->
-    </mat-card-header>
-
-    <img src={{movie.ImagePath}} alt={{movie.Title}} />
-
-    <mat-card-actions>
-      <button mat-button (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)" color="primary">
-        Genre
-      </button>
-
-      <button mat-button (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
-        color="primary">
-        Director
-      </button>
-
-      <button mat-button (click)="openDetailsDialog(movie.Description, movie.ImagePath, movie.Title)" color="primary">
-        Synopsis
-      </button>
-
-      <ng-template #selectFav>
-        <div class="select-favorite">
-          <mat-icon (click)="addToFavorites(movie._id, movie.Title)">favorite_border</mat-icon>
+  <div class="all-movies">
+    <!-- 
+      *ngFor directive is used to display all returned movies and display them on their own card. The customfilter is used with the search pipe and search field above 
+    -->
+    <mat-card *ngFor="let movie of movies | customfilter:filterTerm:'Title'">
+      <mat-card-header>
+        <div class="movie-Title">
+        <mat-card-title>{{movie.title}}</mat-card-title>
         </div>
-      </ng-template>
-    </mat-card-actions>
+      </mat-card-header>
 
-  </mat-card>
+      <img mat-card-image src={{movie.ImagePath}} alt= {{movie.title}} />
+
+      <mat-card-actions>
+        <div class="details">
+          <button
+            class="details-button"
+            mat-stroked-button
+            color="basic"
+            (click)="showMovieDetails(movie.title, movie.ImagePath, movie.description, movie.director.Name, movie.genre.Name)"
+          >
+            Details
+          </button>
+          <br/>
+          <br/>
+        </div>
+        <div class="directed-by">
+          Directed by:
+          <button
+            class="director-button"
+            mat-button
+            color="basic"
+            (click)="showMovieDirector(movie.director.Name, movie.director.Bio, movie.director.Birth, movie.director.Death)"
+          >
+            {{movie.Director.Name}}
+          </button>
+        </div>
+      
+        <div class="genre">
+          Genre:
+          <button
+            class="genre-button"
+            mat-button
+            color="basic"
+            (click)="showMovieGenre(movie.genre.Name, movie.genre.Description)"
+          >
+            {{movie.Genre.Name}}
+          </button>
+        </div>
+        
+        <div class="favorite">
+          <button
+            class="favorite-button"
+            mat-icon-button
+            (click)="addFavorite(movie._id, movie.title)"
+            color="warn"
+            aria-label="Add movie to favorites button"
+          >
+            <mat-icon>
+              favorite_border
+            </mat-icon>
+          </button>
+        </div>
+      </mat-card-actions> 
+    </mat-card>
+  </div>
 </div>

@@ -1,31 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
-.login-title {
+.update-title {
   font-family: "Michroma", sans-serif;
   font-size: 16px;
-  margin-left: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-decoration: underline;
 }
 
-.login-card {
+::ng-deep.mat-dialog-container {
+  background-color: #b0bec5;
+  border: 1px solid black;
+}
+
+.update-card {
   background-color: #cfd8dc;
   border: 1px solid black;
 }
 
-.mat-form-field {
-  margin-top: 8px;
-}
-
-::ng-deep.mat-dialog-container {
-  background-color: #b0bec5;
-}
-
-input {
-  font-size: 14px;
-}
-
-.sign-in-button {
+.update-button {
   font-family: "Michroma", sans-serif;
   margin-bottom: 5px;
   border: 1px solid black;
