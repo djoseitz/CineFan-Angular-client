@@ -1,12 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 .background {
-  background-image: linear-gradient(to bottom right, #cfd8dc, #90a4ae, #546e7a);
+  background-image: linear-gradient(
+    to top left,
+    #797b7c,
+    #353434,
+    #1e1e1e,
+    #000000
+  );
   background-attachment: fixed;
 }
 
 input {
-  font-family: "Michroma", sans-serif;
+  font-family: "Oswald", sans-serif;
   width: 400px;
   height: 30px;
   background-color: #cfd8dc;
@@ -34,7 +40,7 @@ img {
   width: 265px;
   margin: auto;
   margin-bottom: 10px;
-  box-shadow: 3px 3px 15px red;
+  box-shadow: 3px 3px 15px #ede13f;
 }
 
 .all-movies {
@@ -45,9 +51,9 @@ img {
 }
 
 .mat-card {
-  background-color: rgba(55, 71, 79, 0.4);
+  background-color: #191919;
   box-shadow: 8px 8px 15px black;
-  font-family: "Michroma", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 20px;
   width: 310px;
 }
@@ -56,13 +62,13 @@ img {
   height: 65px;
   display: flex;
   align-items: center;
-  -webkit-text-stroke: 1px black;
+  // -webkit-text-stroke: 1px black;
   letter-spacing: 1px;
-  color: black;
+  color: white;
 }
 
 button {
-  font-family: "Michroma", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .details {
@@ -74,30 +80,35 @@ button {
 .details-button {
   font-size: 14px;
   border: 0.5px solid #37474f;
+  background-color: #af34bd;
 }
 
 .directed-by {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: white;
 }
 
 .director-button {
   font-size: 11px;
   float: right;
   text-decoration: underline;
+  color: #ede13f;
 }
 
 .genre {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: white;
 }
 
 .genre-button {
   font-size: 11px;
   float: right;
   text-decoration: underline;
+  color: #ede13f;
 }
 
 .favorite {
@@ -109,9 +120,10 @@ button {
 .favorite-button {
   transform: scale(1.65);
   filter: blur(0.7px);
+  color: #af34bd;
 }
 
 .favorite-button:hover {
-  box-shadow: 1px 1px 1px red;
+  box-shadow: 1px 1px 1px #ede13f;
   background-color: rgba(38, 50, 56, 0.3);
 }

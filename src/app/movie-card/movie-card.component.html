@@ -28,7 +28,7 @@
             class="details-button"
             mat-stroked-button
             color="basic"
-            (click)="showMovieDetails(movie.title, movie.ImagePath, movie.description, movie.director.Name, movie.genre.Name)"
+            (click)="showMovieDetails(movie.Title, movie.ImagePath, movie.Description, movie.Director.Name, movie.Genre.Name)"
           >
             Details
           </button>
@@ -41,7 +41,7 @@
             class="director-button"
             mat-button
             color="basic"
-            (click)="showMovieDirector(movie.director.Name, movie.director.Bio, movie.director.Birth, movie.director.Death)"
+            (click)="showMovieDirector(movie.Director.Name, movie.Director.Bio, movie.Director.Birth, movie.Director.Death)"
           >
             {{movie.Director.Name}}
           </button>
@@ -53,7 +53,7 @@
             class="genre-button"
             mat-button
             color="basic"
-            (click)="showMovieGenre(movie.genre.Name, movie.genre.Description)"
+            (click)="showMovieGenre(movie.Genre.Name, movie.Genre.Description)"
           >
             {{movie.Genre.Name}}
           </button>

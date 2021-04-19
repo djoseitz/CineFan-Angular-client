@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 #navbar {
   position: sticky;
@@ -12,27 +12,31 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 12px;
-  background-color: #546e7a;
+  background-color: #af34bd;
   // background-color: rgba(185, 162, 162, 0.6);
 }
 
 .app-title {
   font-size: 22px;
   margin-left: 30px;
-  color: #ea0016;
+  color: #ede13f;
   font-weight: bold;
-  font-family: "Michroma", sans-serif;
-  -webkit-text-stroke: 1px #ea0016;
+  font-family: "Oswald", sans-serif;
+  -webkit-text-stroke: 1px #ede13f;
   letter-spacing: 2px;
   // text-decoration: underline;
 }
 
 button {
   font-size: 17px;
-  font-family: "Michroma", sans-serif;
-  -webkit-text-stroke: 1px black;
+  font-family: "Oswald", sans-serif;
+  // -webkit-text-stroke: 1px black;
   letter-spacing: 1px;
   color: black;
+}
+
+button:hover {
+  color: white;
 }
 
 .nav-links {
