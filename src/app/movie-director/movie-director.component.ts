@@ -20,6 +20,7 @@ export class MovieDirectorComponent {
     @Inject(MAT_DIALOG_DATA)
     public data: {
       Name: string;
+      Headshot: string;
       Bio: string;
       Birth: Date;
       Death: Date;

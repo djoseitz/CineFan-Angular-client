@@ -405,7 +405,7 @@ export class EditUserService {
   editUser(userDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
-    return this.http.put(`${apiUrl}users/${username}`, userDetails, {
+    return this.http.put(`${apiUrl}/users/${username}`, userDetails, {
       headers: new HttpHeaders ({
         Authorization: 'Bearer ' + token,
       })

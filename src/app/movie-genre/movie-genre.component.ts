@@ -11,8 +11,8 @@ export class MovieGenreComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {
-      name: string;
-      description: string;
+      Name: string;
+      Description: string;
     }
   ) { }
 
