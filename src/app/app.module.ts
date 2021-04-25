@@ -30,6 +30,7 @@ import { SearchPipe } from './search.pipe';
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: UserProfileComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     UpdateProfileComponent,
     SearchPipe
   ],
+  exports: [RouterModule],
   imports: [
     BrowserModule,
     AppRoutingModule,

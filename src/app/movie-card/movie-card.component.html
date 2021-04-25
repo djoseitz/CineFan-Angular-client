@@ -41,7 +41,7 @@
             class="director-button"
             mat-button
             color="basic"
-            (click)="showMovieDirector(movie.Director.Name, movie.Director.Bio, movie.Director.Birth, movie.Director.Death)"
+            (click)="showMovieDirector(movie.Director.Name, movie.Director.Headshot, movie.Director.Bio, movie.Director.Birth, movie.Director.Death)"
           >
             {{movie.Director.Name}}
           </button>
@@ -63,7 +63,7 @@
           <button
             class="favorite-button"
             mat-icon-button
-            (click)="addFavorite(movie._id, movie.title)"
+            (click)="addFavorite(movie._id, movie.Title)"
             color="warn"
             aria-label="Add movie to favorites button"
           >

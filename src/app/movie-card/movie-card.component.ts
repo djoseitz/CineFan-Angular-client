@@ -57,9 +57,9 @@ export class MovieCardComponent implements OnInit {
    * @param birth 
    * @param death 
    */
-  showMovieDirector(Name: string, Bio: string, Birth: Date, Death: Date): void {
+  showMovieDirector(Name: string, Headshot: string, Bio: string, Birth: Date, Death: Date): void {
     this.dialog.open(MovieDirectorComponent, {
-      data: { Name, Bio, Birth, Death },
+      data: { Name, Headshot, Bio, Birth, Death },
       width: '350px',
     });
   }
