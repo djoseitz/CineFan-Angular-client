@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 .body {
-  background-image: linear-gradient(
-    to top left,
-    #797b7c,
-    #353434,
-    #1e1e1e,
-    #000000
-  );
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .user-profile {
